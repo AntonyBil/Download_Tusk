@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_5_URLSession_Download_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icloud.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="90W-aH-vSx">
+                                <rect key="frame" x="0.0" y="59.666666666666657" width="393" height="330.33333333333337"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="yYp-Ou-I1I"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Tr-zw-ayg">
+                                <rect key="frame" x="0.0" y="389" width="393" height="4"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzX-xe-C9M">
+                                <rect key="frame" x="100" y="713" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Download"/>
+                                <connections>
+                                    <action selector="downloadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzP-ya-Bgt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHh-DZ-lyU">
+                                <rect key="frame" x="167" y="209" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="90W-aH-vSx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7fl-n6-77a"/>
+                            <constraint firstItem="WzX-xe-C9M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="A7p-KU-T99"/>
+                            <constraint firstItem="7Tr-zw-ayg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ao2-ZD-rbS"/>
+                            <constraint firstItem="WzX-xe-C9M" firstAttribute="top" secondItem="7Tr-zw-ayg" secondAttribute="bottom" constant="320" id="CY6-Mo-NEd"/>
+                            <constraint firstItem="QHh-DZ-lyU" firstAttribute="centerX" secondItem="90W-aH-vSx" secondAttribute="centerX" id="D1h-vg-fCB"/>
+                            <constraint firstItem="QHh-DZ-lyU" firstAttribute="centerY" secondItem="90W-aH-vSx" secondAttribute="centerY" id="LJx-WF-mtG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Tr-zw-ayg" secondAttribute="trailing" id="VLI-go-zXs"/>
+                            <constraint firstItem="90W-aH-vSx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b8S-PA-a6z"/>
+                            <constraint firstItem="90W-aH-vSx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dlX-aE-cPT"/>
+                            <constraint firstItem="WzX-xe-C9M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j0b-OJ-802"/>
+                            <constraint firstItem="90W-aH-vSx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lQr-Br-Duc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WzX-xe-C9M" secondAttribute="trailing" constant="100" id="oX9-Is-iEI"/>
+                            <constraint firstItem="7Tr-zw-ayg" firstAttribute="top" secondItem="90W-aH-vSx" secondAttribute="bottom" id="tk8-vu-nu7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downloadImageView" destination="90W-aH-vSx" id="ZnG-Q0-2Jd"/>
+                        <outlet property="progresLabel" destination="QHh-DZ-lyU" id="wMa-WN-D0n"/>
+                        <outlet property="progressBar" destination="7Tr-zw-ayg" id="j5D-aT-rTj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icloud.and.arrow.down" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
